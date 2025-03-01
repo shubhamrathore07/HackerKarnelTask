@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-01-2025
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Meeting Records" icon-name="standard:event">
+        <template if:true={meetings}>
+            <lightning-datatable
+            key-field="Id"
+            data={meetings}
+            columns={columns}
+            hide-checkbox-column="true">
+            </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            <p class="slds-text-color_error">Error: error</p>
+        </template>
+    </lightning-card>
+</template>
